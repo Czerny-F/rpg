@@ -8,6 +8,9 @@ class Player(models.Model):
     class Meta:
         pass
 
+    def __str__(self):
+        return self.name
+
 
 class Equipment(models.Model):
     name = models.CharField(max_length=128)
@@ -17,6 +20,9 @@ class Equipment(models.Model):
 
     class Meta:
         pass
+
+    def __str__(self):
+        return self.name
 
 
 class Weapon(Equipment):
