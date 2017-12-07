@@ -19,7 +19,7 @@ class Equipment(models.Model):
                               on_delete=models.SET_NULL)
 
     class Meta:
-        pass
+        abstract = True
 
     def __str__(self):
         return self.name
