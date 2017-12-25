@@ -1,4 +1,5 @@
 from django.db import models
+from model_utils.managers import InheritanceManager
 
 
 class Player(models.Model):
@@ -17,6 +18,7 @@ class Equipment(models.Model):
     owner = models.ForeignKey(Player,
                               null=True,
                               on_delete=models.SET_NULL)
+    objects = InheritanceManager()
 
     class Meta:
         pass
